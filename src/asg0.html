@@ -1,0 +1,56 @@
+<!-- 
+Name: Samuel Morrow
+Email: saamorro@ucsc.edu
+
+Notes: 
+ - Have never used JavaScript before so did not know 
+ necessarily when to use var vs. const vs. let for variable 
+ declarations.
+ - Worked with friends on the assignment, Teddy Danielson
+ and Taima Traore. 
+ - ChatGPT was used to properly format given JavaScript and HTML
+ from the resources given to us. Also used in learning process for 
+ JavaScript (what functions used to parse HTML for inputs).
+ 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Draw a Blue Rectangle (Canvas Version)</title>
+</head>
+<body onload="main()">
+    <canvas id="example" width="400" height="400">
+        Please use a browser that supports canvas
+    </canvas>
+    <script src="asg0.js"></script>
+    <script src="lib/cuon-matrix-cse160.js"></script>
+    <div>
+        <label for="v1x"><b>v1: x</b></label> <input id="v1x" type="number" step=".1"> <label for="v1y"><b>y</b></label> <input id="v1y">
+    </div>
+    <div>
+        <label for="v2x"><b>v2: x</b></label> <input id="v2x" type="number" step=".1"> <label for="v2y"><b>y</b></label> <input id="v2y">
+    </div>
+    <div>
+        <input type="button" onClick="handleDrawEvent()" value="Draw">
+    </div>
+    <div>
+        <label for="select-operation"><b>Operation:</b></label>
+        <select id="select-operation">
+            <option value="add">Add</option>
+            <option value="subtract">Subtract</option>
+            <option value="multiply">Multiply</option>
+            <option value="divide">Divide</option>
+            <option value="magnitude">Magnitude</option>
+            <option value="normalize">Normalize</option>
+            <option value="angle">Angle Between</option>
+            <option value="area">Area</option>
+        </select>
+        <label for="scalar"><b>Scalar:</b></label>
+        <input id="scalar" type="number" step=".1" />
+    </div>
+    <div>
+        <input type="button" onClick="handleDrawOperationEvent()" value="Draw"/>
+    </div>
+</body>
+</html>
